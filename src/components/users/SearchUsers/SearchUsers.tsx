@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { SearchUsersProps } from "./types";
 import type { User } from "../../../types";
+import styles from './SearchUsers.module.css';
 
 export default function SearchUsers({
   users,
@@ -30,12 +31,13 @@ export default function SearchUsers({
   };
 
   return (
-    <div>
+    <div className={styles.searchContainer}>
       <input
         type="text"
         placeholder="Search user by name..."
         onChange={handleSearch}
         value={query}
+        className={styles.searchInput}
       />
     </div>
   );
