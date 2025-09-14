@@ -1,19 +1,26 @@
+@import '../../styles/global.css';
+
 .table {
-  background: #2a2a2a;
-  border-radius: 10px;
+  width: 100%;
+  max-width: 100%;
+  background: var(--background);
+  border-radius: 6px;
   overflow: hidden;
   border-spacing: 0px;
+  border: 1px solid #525252;
+  border-top: none;
 }
 
 .caption {
-  background: #4b6a42;
+  background: var(--secondary-color);
   padding: 4px 0;
   font-size: 20px;
   font-weight: 700;
 }
 
 .table__head {
-  background: rgb(61, 61, 61);
+  background: var(--dark);
+  color: var(--white);
 }
 
 .md__show {
@@ -42,14 +49,19 @@ tr:last-of-type {
   border-bottom: none;
 }
 tbody tr:hover {
-  background: #3a3a3a89;
+  background: #1f1f1f71;
   backdrop-filter: blur(5px);
   cursor: pointer;
+  color: var(--accent);
 }
 
 @media (min-width: 768px) {
   .md__show {
     display: table-cell;
+  }
+
+  .table {
+    max-width: 100px;
   }
 }
 

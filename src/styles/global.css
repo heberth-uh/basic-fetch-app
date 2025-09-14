@@ -1,0 +1,30 @@
+:root {
+  font-family: 'Lucida Console', Consolas, 'Courier New', monospace;
+  line-height: normal;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Main colors */
+  --primary-color: #0f6e00;
+  --secondary-color: #565656;
+  --background: #0f0f0f;
+  --dark: #2a2a2a;
+  --accent: #29db56;
+
+  --black: #000;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
