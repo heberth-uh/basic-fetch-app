@@ -36,12 +36,31 @@ td {
   padding: 15px 5px 15px 15px;
   text-align: left;
   border-right: 1px solid #525252;
+  word-wrap: break-word
+}
+
+th:first-of-type,
+td:first-child {
+  width: 180px;
 }
 
 td:last-child {
   border-right: none;
 }
 
+/* Link styles */
+.table a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.table a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Rows styles */
 tr {
   border-bottom: 1px solid #525252;
 }
@@ -55,16 +74,18 @@ tbody tr:hover {
   color: var(--accent);
 }
 
+/* Medium screens and up */
 @media (min-width: 768px) {
   .md__show {
     display: table-cell;
   }
 
   .table {
-    max-width: 100px;
+    width: 100%;
   }
 }
 
+/* Large screens and up */
 @media (min-width: 1024px) {
   .lg__show {
     display: table-cell;
