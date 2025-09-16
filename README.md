@@ -2,6 +2,8 @@
 
 A simple React application built to demonstrate data fetching skills, custom hooks implementation and TypeScript integration.
 
+<img width="2039" height="1099" alt="image" src="https://github.com/user-attachments/assets/68d63d0c-0d50-4681-b03c-9f6a7ea100df" />
+
 This is a practice project that fetches user data from the JSONPlaceholder API and displays it in a clean and seaarchable table format with a aclient-side filtering with a debounced search functionality
 
 ## Tech Stack
