@@ -5,13 +5,24 @@ import type { User } from "../../types";
 import SearchUsers from "../Users/SearchUsers/SearchUsers";
 
 export default function Users() {
-  const { data: users } = useFetch();
+  const { data: users, loading, error } = useFetch();
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
 
   // Initialize filteredUsers with the fetched users
   useEffect(() => {
     setFilteredUsers(users);
   }, [users]);
+
+  if (loading) return <p>Loading...</p>;
+
+  if (error) {
+    return (
+      <div>
+        <h2>Error Loading Users</h2>
+        <p>{error}</p>
+      </div>
+    )
+  }
 
   return (
     <>
